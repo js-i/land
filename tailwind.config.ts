@@ -9,10 +9,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: '#F5F1EA',
+        primary: '#4C4E41',
+        hover: '#31322C',
       },
-    },
+      lineHeight: {
+        base: "20px", // Теперь можно использовать leading-base
+      },
+      letterSpacing: {
+        '3p': '3%', // добавляем пользовательский класс для letter-spacing 3%
+      },
   },
+ },
   plugins: [],
 } satisfies Config;
