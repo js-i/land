@@ -165,7 +165,7 @@ export default function Home() {
         <Slider />
         {/* <SS /> */}
       </section>
-      <section className="bg-[#F6F3EC]  md:py-16 md:px-8 lg:px-20">
+      <section id='service' className="bg-[#F6F3EC]  md:py-16 md:px-8 lg:px-20">
           <div className="mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-3 md:mt-8">
               <div className="p-6">
