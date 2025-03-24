@@ -32,7 +32,7 @@ export default function Home() {
             <h1 className="hidden md:block md:text-2xl lg:text-6xl text-[#31322C] tracking-[0.03em] font-semibold">ПСИХОТЕРАПЕВТ</h1>
             <h3 className="hidden md:block text-2xl pb-12">с высшим медицинским образованием</h3>
             <p className="text-sm mt-8 mb-6 md:mt-0 md:pb-6 tracking-normal">Помогаю справляться с тревогой, стрессом и жизненными трудностями с опорой на научно обоснованные методы.<br/> Вместе мы найдем решения, которые приведут к лучшему качеству жизни.</p>
-            <UiButton size="lg" variant="primary">Записаться на консультацию</UiButton>
+            <UiButton id='contacts' size="lg" variant="primary">Записаться на консультацию</UiButton>
           </div>
           <Fotoinsquare className='order-2 md:flex md:order-2 md:w-1/2 lg:w-2/5'/>
       </section>
@@ -157,7 +157,7 @@ export default function Home() {
                   <p className="mt-2 text-sm">{item.description}</p>
                 </div>
               ))}
-              <UiButton className="md:hidden mx-4" size="lg" variant="primary">Записаться на консультацию</UiButton>
+              <UiButton id='contacts' className="md:hidden mx-4" size="lg" variant="primary">Записаться на консультацию</UiButton>
           </div>
         </div>
       </section>
@@ -213,7 +213,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full pt-12 md:py-16 px-4 md:px-8 lg:px-20 flex justify-center">
+      <section id='contacts' className="w-full pt-12 md:py-16 px-4 md:px-8 lg:px-20 flex justify-center">
         <div className="md:w-3/5 flex flex-col-reverse items-center justify-center md:flex-col">
           <Image className="md:hidden mb-12" src={fotofooter} alt='foto' />
           <div className="text-xs tracking-tight font-medium md:w-1/2 bg-white p-6 md:ml-9 mt-10 md:mb-20 rounded-lg">
@@ -223,11 +223,11 @@ export default function Home() {
               <div className="flex flex-col items-center gap-6 md:gap-12 md:w-1/2">
                 <h2 className="text-3xl font-semibold text-nowrap md:text-white">СПОСОБЫ СВЯЗИ</h2>
                 <div className="w-full md:w-auto">
-                  <Link href='' className="w-full mb-12 flex justify-center text-2xl font-semibold bg-primary text-white px-6 py-3 rounded-full outline transition-colors hover:scale-110">
+                  <Link href='https://wa.me/message/UH6UEJ2QPWAGD1' className="w-full mb-12 flex justify-center text-2xl font-semibold bg-primary text-white px-6 py-3 rounded-full outline transition-colors hover:scale-110">
                     <Image className="mr-3" src={whatsapp} alt='whatsapp' />
                     WhatsApp
                   </Link>
-                  <Link href='https:\\t.me\cbt_doc' className="w-full flex justify-center items-center text-2xl font-semibold bg-primary text-white md:text-primary md:bg-white px-6 py-3 rounded-full hover:scale-110">
+                  <Link href='https://t.me/cbt_doc' className="w-full flex justify-center items-center text-2xl font-semibold bg-primary text-white md:text-primary md:bg-white px-6 py-3 rounded-full hover:scale-110">
                     <svg className='fill-white md:fill-primary mr-3' width="23" height="19" viewBox="0 0 23 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M2.45379 7.84883C8.35936 5.27585 12.2973 3.57959 14.2677 2.76003C19.8935 0.420046 21.0625 0.0135654 21.8244 0.000143111C21.992 -0.00280896 22.3667 0.0387227 22.6094 0.235669C22.8144 0.401967 22.8708 0.626612 22.8978 0.78428C22.9247 0.941949 22.9583 1.30112 22.9316 1.58177C22.6268 4.78504 21.3076 12.5585 20.6365 16.1462C20.3525 17.6643 19.7934 18.1733 19.2521 18.2231C18.0757 18.3314 17.1824 17.4457 16.0429 16.6988C14.26 15.53 13.2527 14.8025 11.5221 13.662C9.52199 12.3439 10.8186 11.6195 11.9584 10.4356C12.2567 10.1258 17.44 5.41117 17.5403 4.98348C17.5529 4.92999 17.5645 4.7306 17.4461 4.62532C17.3276 4.52004 17.1528 4.55604 17.0266 4.58467C16.8478 4.62526 13.9995 6.50789 8.48176 10.2326C7.67328 10.7877 6.94099 11.0582 6.28488 11.044C5.56157 11.0284 4.17021 10.6351 3.13588 10.2988C1.86723 9.88646 0.858936 9.66842 0.946736 8.96806C0.992468 8.60326 1.49482 8.23019 2.45379 7.84883Z"/>
                     </svg>Telegram

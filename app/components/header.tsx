@@ -12,7 +12,7 @@ export default function Header({className=''}) {
   }  
 
   return (
-    <header className={`flex items-center ${isOpen ? 'flex-col-reverse' : 'flex-row'} border-b border-b-hover/50 max-w-[1650px] md:max-h-24 w-full container bg-[#F5F1EA] fixed top-0 z-50 `}>
+    <header className={`flex items-center ${isOpen ? 'flex-col-reverse' : 'flex-row'} opacity-95 max-w-[1650px] md:max-h-24 w-full container bg-[#F5F1EA] fixed top-0 z-50 `}>
          <div className={`md:hidden  bg-background w-full transition-all duration-300 ease-in-out ${
                     isOpen ? 'block' : 'hidden'
                 }`}
@@ -46,7 +46,7 @@ export default function Header({className=''}) {
                 >
                     Услуги
                 </Link>
-                <Link className='bg-primary text-white px-4 py-2 rounded-full' href='https:\\t.me\cbt_doc'>Записаться на консультацию</Link>
+                <Link className='bg-primary text-white px-4 py-2 rounded-full' onClick={handleClick} href='#contacts'>Записаться на консультацию</Link>
           </nav>
         </div>
         <nav className={clsx(className, 'w-full hidden md:block')}>
@@ -73,7 +73,7 @@ export default function Header({className=''}) {
             </li>
             <li className="ml-auto lg:pr-12">
                 <UiButton size='lg' variant='primary'>
-                        <Link href='https:\\t.me\cbt_doc'>Записаться на консультацию</Link>
+                        <Link href='#contacts'>Записаться на консультацию</Link>
                 </UiButton>
             </li>
           </ul>
