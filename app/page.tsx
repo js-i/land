@@ -35,7 +35,7 @@ export default function Home() {
           </div>
           <Fotoinsquare className='order-2 md:flex md:order-2 md:w-1/2 lg:w-2/5'/>
       </section>
-      <section className="w-full mt-12 p-4 md:mt-0 md:mb-36 overflow-hidden">
+      <section className="w-full mt-12 p-4 mb-14 md:mt-0 md:mb-36 overflow-hidden">
         <div className="grid md:grid-cols-2 md:mt-36 md:mx-24 mb-6 md:mb-20 ">
           <h2 className="text-2xl text-[#31322C] mb-3 md:mb-0 md:text-3xl font-semibold">КАК Я РАБОТАЮ?</h2>
           <p className="text-xs tracking-tight md:text-2xl font-medium">Я провожу психотерапевтические сессии онлайн через видеозвонки, что позволяет вам работать с запросом в комфортных условиях. </p>
@@ -145,14 +145,14 @@ export default function Home() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className={`mx-4 md:mx-0 p-6 rounded-xl ${
+                  className={`flex flex-col mx-4 md:mx-0 p-6 h-60 rounded-xl ${
                     item.highlighted
                       ? "bg-[#4C4E41] text-white"
                       : "bg-white text-black"
                   }`}
                 >
                   <span className="text-3xl"><Image src={item.icon} alt="icon"/></span>
-                  <h3 className="font-semibold text-lg mt-3">{item.title}</h3>
+                  <h3 className="font-semibold text-lg mt-auto">{item.title}</h3>
                   <p className="mt-2 text-sm">{item.description}</p>
                 </div>
               ))}
@@ -160,14 +160,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="review" className="bg-[#F6F3EC] md:px-8 lg:px-20 overflow-hidden">
+      <section id="review" className="bg-[#F6F3EC] mb-14 md:px-8 lg:px-20 overflow-hidden">
         <Slider />
         {/* <SS /> */}
       </section>
-      <section id='service' className="bg-[#F6F3EC]  md:py-16 md:px-8 lg:px-20">
+      <section id='service' className="bg-[#F6F3EC] md:py-16 md:px-8 lg:px-20">
           <div className="mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-3 md:mt-8">
-              <div className="p-6">
+              <div className="px-6 md:p-6">
                 <h2 className="text-2xl font-semibold mb-3 md:mb-6 text-[#31322C]">
                   УСЛУГИ И ЦЕНЫ
                 </h2>
@@ -204,7 +204,7 @@ export default function Home() {
                   <h3 className="font-semibold text-lg md:mt-3">{item.title.toUpperCase()}</h3>
                   <p className="mt-2 text-sm mb-6">{item.description}</p>
                   <div className="flex justify-between">
-                    <div>{item.time.toUpperCase()}</div>
+                    <div className="font-semibold">{item.time.toUpperCase()}</div>
                     <div className="text-white bg-[#6B8E4E] px-4 py-2 rounded-3xl">{item.price.toUpperCase()}</div>
                   </div>
                 </div>
@@ -215,7 +215,7 @@ export default function Home() {
       <section id='contacts' className="w-full pt-12 md:py-16 px-4 md:px-8 lg:px-20 flex justify-center">
         <div className="md:w-3/5 flex flex-col-reverse items-center justify-center md:flex-col">
           <Image className="md:hidden mb-12" src={fotofooter} alt="Фотография психотерапевта помогающего с тревогой Георгия Меньшикова" />
-          <div className="text-xs tracking-tight font-medium md:w-1/2 bg-white p-6 md:ml-9 mt-10 md:mb-20 rounded-lg">
+          <div className="text-xs tracking-tight font-medium md:w-1/2 bg-white p-6 md:ml-9 mt-10 max-w-80 lg:max-w-96 md:mb-20 rounded-lg lg:self-start">
               <p>Если у вас остались вопросы или вы хотите записаться на сессию, мы можем связаться любым удобным для вас способом</p>
           </div>
           <div className="flex justify-center md:bg-primary w-full rounded-lg md:p-10">
@@ -223,12 +223,12 @@ export default function Home() {
                 <h2 className="text-3xl font-semibold text-nowrap md:text-white">СПОСОБЫ СВЯЗИ</h2>
                 <div className="w-full md:w-auto">
                   <Link href='https://wa.me/message/UH6UEJ2QPWAGD1' className="w-full mb-12 flex justify-center text-2xl font-semibold bg-primary text-white px-6 py-3 rounded-full outline transition-colors hover:scale-110">
-                    <Image className="mr-3" src={whatsapp} alt='whatsapp' />
+                    <Image className="mr-3" src={whatsapp} alt='whatsapp'  />
                     WhatsApp
                   </Link>
                   <Link href='https://t.me/cbt_doc' className="w-full flex justify-center items-center text-2xl font-semibold bg-primary text-white md:text-primary md:bg-white px-6 py-3 rounded-full hover:scale-110">
                     <svg className='fill-white md:fill-primary mr-3' width="23" height="19" viewBox="0 0 23 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.45379 7.84883C8.35936 5.27585 12.2973 3.57959 14.2677 2.76003C19.8935 0.420046 21.0625 0.0135654 21.8244 0.000143111C21.992 -0.00280896 22.3667 0.0387227 22.6094 0.235669C22.8144 0.401967 22.8708 0.626612 22.8978 0.78428C22.9247 0.941949 22.9583 1.30112 22.9316 1.58177C22.6268 4.78504 21.3076 12.5585 20.6365 16.1462C20.3525 17.6643 19.7934 18.1733 19.2521 18.2231C18.0757 18.3314 17.1824 17.4457 16.0429 16.6988C14.26 15.53 13.2527 14.8025 11.5221 13.662C9.52199 12.3439 10.8186 11.6195 11.9584 10.4356C12.2567 10.1258 17.44 5.41117 17.5403 4.98348C17.5529 4.92999 17.5645 4.7306 17.4461 4.62532C17.3276 4.52004 17.1528 4.55604 17.0266 4.58467C16.8478 4.62526 13.9995 6.50789 8.48176 10.2326C7.67328 10.7877 6.94099 11.0582 6.28488 11.044C5.56157 11.0284 4.17021 10.6351 3.13588 10.2988C1.86723 9.88646 0.858936 9.66842 0.946736 8.96806C0.992468 8.60326 1.49482 8.23019 2.45379 7.84883Z"/>
+                        <path fillRule="evenodd" clipRule="evenodd" d="M2.45379 7.84883C8.35936 5.27585 12.2973 3.57959 14.2677 2.76003C19.8935 0.420046 21.0625 0.0135654 21.8244 0.000143111C21.992 -0.00280896 22.3667 0.0387227 22.6094 0.235669C22.8144 0.401967 22.8708 0.626612 22.8978 0.78428C22.9247 0.941949 22.9583 1.30112 22.9316 1.58177C22.6268 4.78504 21.3076 12.5585 20.6365 16.1462C20.3525 17.6643 19.7934 18.1733 19.2521 18.2231C18.0757 18.3314 17.1824 17.4457 16.0429 16.6988C14.26 15.53 13.2527 14.8025 11.5221 13.662C9.52199 12.3439 10.8186 11.6195 11.9584 10.4356C12.2567 10.1258 17.44 5.41117 17.5403 4.98348C17.5529 4.92999 17.5645 4.7306 17.4461 4.62532C17.3276 4.52004 17.1528 4.55604 17.0266 4.58467C16.8478 4.62526 13.9995 6.50789 8.48176 10.2326C7.67328 10.7877 6.94099 11.0582 6.28488 11.044C5.56157 11.0284 4.17021 10.6351 3.13588 10.2988C1.86723 9.88646 0.858936 9.66842 0.946736 8.96806C0.992468 8.60326 1.49482 8.23019 2.45379 7.84883Z"/>
                     </svg>Telegram
                   </Link>
                 </div>

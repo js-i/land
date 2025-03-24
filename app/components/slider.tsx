@@ -95,14 +95,14 @@ export const Slider = () => {
           className="p-2 rounded-full flex items-center justify-center disabled:opacity-50"
           disabled={currentIndex === 0}
         >
-          <Image src={arR} alt="arrow-left" />
+          <Image src={arR} className='w-14 md:w-auto' alt="arrow-left" />
         </button>
         <button
           onClick={nextSlide}
           className="p-2 rounded-full flex items-center justify-center disabled:opacity-50"
           disabled={currentIndex >= Math.ceil(images.length / slidesPerView) - 1}
         >
-          <Image src={arL} alt="arrow-right"/>
+          <Image src={arL} className='w-14 md:w-auto' alt="arrow-right"/>
         </button>
       </div>
     </div>
