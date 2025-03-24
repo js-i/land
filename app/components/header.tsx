@@ -12,7 +12,7 @@ export default function Header({className=''}) {
   }  
 
   return (
-    <header className={`flex items-center ${isOpen ? 'flex-col-reverse' : 'flex-row'} opacity-95 max-w-[1650px] md:max-h-24 w-full container bg-[#F5F1EA] fixed top-0 z-50 `}>
+    <header className={`flex items-center ${isOpen ? 'flex-col-reverse' : 'flex-row'}  max-w-[1650px] md:max-h-24 w-full container bg-[#F5F1EA] fixed top-0 z-50 `}>
          <div className={`md:hidden  bg-background w-full transition-all duration-300 ease-in-out ${
                     isOpen ? 'block' : 'hidden'
                 }`}

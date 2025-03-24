@@ -10,21 +10,41 @@ import wave from '@/public/tidal-wave--nature-ocean-wave.svg'
 import volc from '@/public/volcano--nature-eruption-erupt-mountain-volcano-lava-magma-explosion.svg'
 import Slider from "./components/slider";
 import whatsapp from '@/public/whatsapp.svg'
-
 import foto3 from '@/public/foto3.png'
 import fotomobile from '@/public/mobile-foto.png'
 import Fotoinsquare from "./components/fotoinround";
 import fotofooter from '@/public/mobil-foot.png'
 import Link from "next/link";
-
+import Head from "next/head";
 
 export default function Home() {
   return (
+    <>
+    <Head>
+      <title>Георгий Меньшиков – Психотерапевт</title>
+      <meta name="description" content="Помогаю справляться с тревогой, стрессом и жизненными трудностями с опорой на научно обоснованные методы." />
+      <meta name="keywords" content="психотерапевт, онлайн терапия, психологическая помощь, когнитивно-поведенческая терапия" />
+      <meta property="og:title" content="Георгий Меньшиков – Психотерапевт" />
+      <meta property="og:description" content="Онлайн консультации по психотерапии. Работа с тревогой, стрессом, выгоранием и другими проблемами." />
+      <meta property="og:image" content="/path/to/image.jpg" />
+      <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Георгий Меньшиков",
+        "jobTitle": "Психотерапевт",
+        "description": "Помогаю справляться с тревогой, стрессом и жизненными трудностями.",
+        "image": "/public/to/photo.jpg",
+        "url": "https://cbtdoc.ru",
+ 
+      })}
+  </script>
+    </Head>
     <main className="flex flex-col items-start justify-start w-full h-max mt-14 md:mt-40 container max-w-[1650px] mx-auto ">
       <section id="about" className="flex flex-col justify-center self-center p-4 md:flex-row md:gap-10 bg-white max-w-[1450px] w-full rounded-3xl overflow-hidden md:overflow-visible">
           <div className="order-1 md:hidden flex flex-col w-full items-center">
-            <h2 className="whitespace-nowrap text-xl md:text-4xl pb-4 self-center">Георгий Меньшиков</h2>
-            <h1 className="text-3xl font-bold text-[#31322C] tracking-[0.03em] ">ПСИХОТЕРАПЕВТ</h1>
+            <h1 className="whitespace-nowrap text-xl md:text-4xl pb-4 self-center">Георгий Меньшиков</h1>
+            <h2 className="text-3xl font-bold text-[#31322C] tracking-[0.03em] ">ПСИХОТЕРАПЕВТ</h2>
             <h3 className="text-sm pb-12">с высшим медицинским образованием</h3>
           </div>
           <div className="flex flex-col order-3 md:order-1 w-full md:w-1/2 lg:w-3/5 items-start md:py-20 md:pl-3 md:pr-5 lg:pl-10 xl:pl-20 xl:pr-20">
@@ -62,7 +82,7 @@ export default function Home() {
             <div className="w-96"><h3 className="text-xl font-semibold">Регулярные сессии</h3><p>Глубокая проработка мыслей, эмоций и поведения.</p></div>
             <div className="w-96"><h3 className="text-xl font-semibold">Оценка прогресса</h3><p>Подводим итоги и закрепляем изменения, профилактические встречи.</p></div>
           </div>
-          <Image src={Union} alt="way of psyhotherapy" loading="lazy"/>
+          <Image src={Union} alt="Фотография психотерапевта Георгия Меньшикова" loading="lazy"/>
           <div className="flex justify-center gap-24">
             <div className="w-96"><h3 className="text-xl font-semibold">Вступительные сессии</h3><p>Обсуждаем ситуацию, намечаем план работы. (1-3 встречи)</p></div>
             <div className="w-96"><h3 className="text-xl font-semibold">Домашние задания</h3><p>Техники и рекомендации для работы между встречами.</p></div>
@@ -73,7 +93,7 @@ export default function Home() {
         <div className="md:w-1/2">
           <h2 className="text-2xl text-[#31322C] md:text-3xl font-semibold mb-6">ОБО МНЕ</h2>
           <p className="text-xs md:text-2xl font-medium mb-2 md:mb-14">Я врач-психотерапевт с опытом работы более 8 лет в сфере ментального здоровья.</p>
-          <Image src={fotomobile} className="md:hidden w-full mb-6" alt='foto of psychotherapy' priority/>
+          <Image src={fotomobile} className="md:hidden w-full mb-6" alt="Фотография психотерапевта Георгия Меньшикова" priority/>
           <div className="relative ml-3 md:ml-0 border-l border-black/50 pl-6">
             {[
               { year: "2009 - 2015", title: "Санкт-Петербургский Государственный Университет. Медицинский факультет", subtitle: "Лечебное дело" },
@@ -94,7 +114,7 @@ export default function Home() {
         <div className="md:w-1/2">
           <div className="relative rounded-full w-full aspect-square bg-[#4C4E41] overflow-hidden">
             <Image loading="lazy" src={foto2} className="absolute object-cover w-[80%] left-24 -bottom-6" 
-             alt='foto of psychotherapy'/>
+             alt="Фотография психотерапевта Георгия Меньшикова"/>
           </div>
         </div>
       </section>
@@ -215,7 +235,7 @@ export default function Home() {
       </section>
       <section id='contacts' className="w-full pt-12 md:py-16 px-4 md:px-8 lg:px-20 flex justify-center">
         <div className="md:w-3/5 flex flex-col-reverse items-center justify-center md:flex-col">
-          <Image className="md:hidden mb-12" src={fotofooter} alt='foto' />
+          <Image className="md:hidden mb-12" src={fotofooter} alt="Фотография психотерапевта помогающего с тревогой Георгия Меньшикова" />
           <div className="text-xs tracking-tight font-medium md:w-1/2 bg-white p-6 md:ml-9 mt-10 md:mb-20 rounded-lg">
               <p>Если у вас остались вопросы или вы хотите записаться на сессию, мы можем связаться любым удобным для вас способом</p>
           </div>
@@ -241,6 +261,7 @@ export default function Home() {
         </div>
       </section>
     </main>
+    </>
   );
 }
 
