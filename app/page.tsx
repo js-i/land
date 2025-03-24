@@ -15,31 +15,10 @@ import fotomobile from '@/public/mobile-foto.png'
 import Fotoinsquare from "./components/fotoinround";
 import fotofooter from '@/public/mobil-foot.png'
 import Link from "next/link";
-import Head from "next/head";
+
 
 export default function Home() {
   return (
-    <>
-    <Head>
-      <title>Георгий Меньшиков – Психотерапевт</title>
-      <meta name="description" content="Помогаю справляться с тревогой, стрессом и жизненными трудностями с опорой на научно обоснованные методы." />
-      <meta name="keywords" content="психотерапевт, онлайн терапия, психологическая помощь, когнитивно-поведенческая терапия" />
-      <meta property="og:title" content="Георгий Меньшиков – Психотерапевт" />
-      <meta property="og:description" content="Онлайн консультации по психотерапии. Работа с тревогой, стрессом, выгоранием и другими проблемами." />
-      <meta property="og:image" content="/path/to/image.jpg" />
-      <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Георгий Меньшиков",
-        "jobTitle": "Психотерапевт",
-        "description": "Помогаю справляться с тревогой, стрессом и жизненными трудностями.",
-        "image": "/public/to/photo.jpg",
-        "url": "https://cbtdoc.ru",
- 
-      })}
-  </script>
-    </Head>
     <main className="flex flex-col items-start justify-start w-full h-max mt-14 md:mt-40 container max-w-[1650px] mx-auto ">
       <section id="about" className="flex flex-col justify-center self-center p-4 md:flex-row md:gap-10 bg-white max-w-[1450px] w-full rounded-3xl overflow-hidden md:overflow-visible">
           <div className="order-1 md:hidden flex flex-col w-full items-center">
@@ -261,7 +240,6 @@ export default function Home() {
         </div>
       </section>
     </main>
-    </>
   );
 }
 
